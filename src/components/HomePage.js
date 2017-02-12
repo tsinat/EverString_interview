@@ -25,7 +25,7 @@ class HomePage extends Component {
                 return (
                     <div className="" key={index}>
                         Repo_Name: {repo.name} <br />
-                        Start: { repo.stargazers_count}
+                        Star: { repo.stargazers_count}
                     </div>
                 );
             });
