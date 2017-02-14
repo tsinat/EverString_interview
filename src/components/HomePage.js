@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import * as actions from '../actions';
 
 class HomePage extends Component {
@@ -20,7 +21,6 @@ class HomePage extends Component {
 
     renderList() {
         if(this.props.repos != "") {
-            // console.log(this.props.repos.repos);
             const repoList = this.props.repos.repos.map((repo, index) => {
                 return (
                     <div className="" key={index}>
@@ -36,7 +36,7 @@ class HomePage extends Component {
             <div>
                 Loading
             </div>
-        )
+        );
     }
 
     render(){
@@ -61,9 +61,11 @@ class HomePage extends Component {
         );
     }
 }
+
 function mapStateToProps(state) {
     return {
         repos: state.repo
     }
 }
+
 export default connect(mapStateToProps, actions)(HomePage);
